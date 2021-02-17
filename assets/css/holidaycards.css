@@ -44,11 +44,12 @@
 .carousel-item img {
     width: 80%
 }
-@media screen and (max-width: 600px){
+@media screen and (max-width: 800px){
     .carousel-inner{
-        width:500px;
-        height: 700px;
+        width:450px;
+        height: 650px;
         margin: 0 auto;
     }
+
 
 }
