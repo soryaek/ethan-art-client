@@ -5,8 +5,10 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<!-- Stylesheets
 	============================================= -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap"
+		rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="assets/style.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/dark.css" type="text/css" />
@@ -14,51 +16,117 @@
 	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/custom.css" type="text/css" />
-	<link rel="stylesheet" href="assets/css/carousel.css" type="text/css" />
-   
+
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
-	<meta property="og:locale" content="en_US">
-	<meta property="og:type" content="website">
-	<meta property="og:title" content="Holiday Cards | ethanAart" />
-	<meta property="og:description" content="Holiday Cards art by Ethan Altshuler created during his childhood">
-	<meta property="og:url" content="https://myclone.page/">
-	<meta property="og:site_name" content="myclone.page">
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Ethan In Action | ethanAart" />
+	<meta property="og:description" content="Ethan In Action art by Ethan Altshuler created during his childhood" />
+	<meta property="og:url" content="https://myclone.page/" />
+	<meta property="og:site_name" content="myclone.page" />
 	<meta property="og:image" content="https://myclone.page/images/og-color-logo-ethanaart.jpg" />
-	<title> | ethanAart</title>
-	<meta name="description" content=" Holiday Cards art by Ethan Altshuler created during his childhood" />
-	<meta name="keywords" content="Holiday Cards art, childhood" />
+	<title>Ethan In Action | ethanAart</title>
+	<meta name="description" content=" Ethan In Action art by Ethan Altshuler created during his childhood" />
+	<meta name="keywords" content="Ethan In Action art, childhood" />
 	<meta name="robots" content="all,follow" />
 	<meta name="googlebot" content="index,follow,snippet,archive" />
-	<meta name="twitter:card" content="https://myclone.page/images/og-color-logo-ethanaart.jpg">
-	<meta name="twitter:title" content="Holiday Cards | ethanAart ">
+	<meta name="twitter:card" content="https://myclone.page/images/og-color-logo-ethanaart.jpg" />
+	<meta name="twitter:title" content="Ethan In Action | ethanAart " />
 	<meta name="twitter:url" content=" https://myclone.page/ethanentersmidteens.html" />
-	<meta name="twitter:description" content=" Abstract art by Ethan Altshuler created during his childhood ">
+	<meta name="twitter:description" content=" Abstract art by Ethan Altshuler created during his childhood " />
 	<meta name="twitter:image" content=" https://myclone.page/images/og-color-logo-ethanaart.jpg" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130204150-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-		
-			gtag('config', 'UA-130204150-1');
 
-	// init Masonry
-	var $grid = $('.grid').masonry({
-		itemSelector: '.grid-item',
-		percentPosition: true,
-		columnWidth: '.grid-sizer'
-	});
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag("js", new Date());
 
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry();
-	});  
+		gtag("config", "UA-130204150-1");
+
+		// init Masonry
+		var $grid = $(".grid").masonry({
+			itemSelector: ".grid-item",
+			percentPosition: true,
+			columnWidth: ".grid-sizer",
+		});
+
+		// layout Masonry after each image loads
+		$grid.imagesLoaded().progress(function () {
+			$grid.masonry();
+		});
 	</script>
-<style>
-	.side-header #logo img {
-		height: auto !important;
-	}
+	<style>
+		.side-header #logo img {
+			height: auto !important;
+		}
+		.carousel-inner {
+			width: 500px;
+			height: 700px;
+			margin: 0 auto;
+		}
+		.carousel-control-next,
+		.carousel-control-prev {
+			height: 700px;
+		}
+		.carousel-control-next-icon,
+		.carousel-control-prev-icon {
+			filter: invert(1);
+		}
+		#custCarousel {
+			margin-top: 20px;
+		}
+		#custCarousel .carousel-indicators {
+			position: static;
+			margin-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			list-style-type: none;
+			padding-left: 0;
+			margin-bottom: 200px;
+		}
+		#custCarousel .carousel-indicators>li {
+			width: 100px;
+			opacity: 1;
+			margin-bottom: 140px;
+
+		}
+		#custCarousel .carousel-indicators li img {
+			display: block;
+			max-width: 100%;
+			margin: 10px;
+			margin-bottom: 20px;
+			opacity: 1;
+
+		}
+		#custCarousel .carousel-indicators li.active img {
+			border: 3px solid black;
+		}
+		@media screen and (max-width: 768px) {
+			.carousel-inner {
+				width: 400px;
+				height: 600px;
+				margin: 0 auto;
+			}
+			.carousel-control-next,
+			.carousel-control-prev {
+				height: 600px;
+			}
+		}
+		@media screen and (max-width: 600px) {
+			.carousel-inner {
+				width: 350px;
+				height: 550px;
+				margin: 0 auto;
+			}
+			.carousel-control-next,
+			.carousel-control-prev {
+				height: 550px;
+			}
+		}
 	</style>
 </head>
 
@@ -70,30 +138,39 @@
 					<div class="header-row justify-content-between">
 						<div id="logo">
 							<a href="index.html" class="standard-logo" data-dark-logo="../images/350_colorLogo.jpg">
-								<img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo">
+								<img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo" />
 							</a>
 							<a href="index.html" class="retina-logo" data-dark-logo="../images/350_colorLogo.jpg">
-								<img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo">
+								<img src="images/350_colorLogo.jpg" alt="Ethan Altshuler myclone.page Logo" />
 							</a>
 						</div>
 						<!-- #logo end -->
 						<div id="primary-menu-trigger">
 							<svg class="svg-trigger" viewBox="0 0 100 100">
-								<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
 								<path d="m 30,50 h 40"></path>
-								<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
 							</svg>
 						</div>
 						<div class="header-misc d-none d-sm-block">
-							<img src="images/119_Sketching_at_the_bluffs_6_.jpg" alt="" style="" border="0">
+							<img src="images/119_Sketching_at_the_bluffs_6_.jpg" alt="" style="" border="0" />
 							<div class="d-flex my-lg-3">
-								<a href="https://www.facebook.com/ethanAart/" class="social-icon si-small si-borderless si-facebook">	<i class="icon-facebook"></i>
+								<a href="https://www.facebook.com/ethanAart/"
+									class="social-icon si-small si-borderless si-facebook">
+									<i class="icon-facebook"></i>
 									<i class="icon-facebook"></i>
 								</a>
-								<a href="https://www.instagram.com/ethanaart/" class="social-icon si-small si-borderless si-pinterest">	<i class="icon-instagram"></i>
+								<a href="https://www.instagram.com/ethanaart/"
+									class="social-icon si-small si-borderless si-pinterest">
+									<i class="icon-instagram"></i>
 									<i class="icon-instagram"></i>
 								</a>
-								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">	<i class="icon-store"></i>
+								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">
+									<i class="icon-store"></i>
 									<i class="icon-store"></i>
 								</a>
 							</div>
@@ -127,6 +204,7 @@
 										</li>
 									</ul>
 								</li>
+
 								<li class="menu-item">
 									<a class="menu-link" href="abstract.html">
 										<div>Abstract</div>
@@ -281,11 +359,11 @@
 												<div>Linkin Park</div>
 											</a>
 										</li>
-								<li class="menu-item">
-									<a class="menu-link" href="tshirtdesigns.html">
-										<div>Early T-Shirt Designs</div>
-									</a>
-								</li>
+										<li class="menu-item">
+											<a class="menu-link" href="tshirtdesigns.html">
+												<div>Early T-Shirt Designs</div>
+											</a>
+										</li>
 									</ul>
 								</li>
 							</ul>
@@ -297,218 +375,254 @@
 		</header>
 		<section id="page-title">
 			<div class="container clearfix">
-				<h1>Holiday Cards</h1>
+				<h1>Ethan In Action</h1>
 				<ol class="breadcrumb">
-					<li class="breadcrumb-item"><a href="#">Home</a>
+					<li class="breadcrumb-item"><a href="#">Home</a></li>
+					<li class="breadcrumb-item active" aria-current="page">
+						Ethan In Action
 					</li>
-					<li class="breadcrumb-item active" aria-current="page">Holiday Cards</li>
 				</ol>
 			</div>
 		</section>
-    <section> 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
-                        <!-- slides -->
-                        <div class="carousel-inner d-flex align-items-center">
-
-                            <div class="carousel-item active">
-                                <img src="images/428_eia0001.jpg" alt="Ethan and his art Teacher"> 
-								<h3>Ethan and his art Teacher</h3>
-                            </div>
-
-                            <div class="carousel-item">
-                                <img src="images/754_eia0002.jpeg" alt="Young Ethan at home"> 
-                                <h3>Young Ethan at home</h3>
-                            </div>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+						<!-- slides -->
+						<div class="carousel-inner d-flex align-items-center">
+							<div class="carousel-item active">
+								<img src="images/428_eia0001.jpg" alt="Ethan and his art Teacher" />
+								<h4>Ethan and his art Teacher</h4>
+							</div>
 
 							<div class="carousel-item">
-                                <img src="images/287_eia0003.jpg" alt="Young Ethan at home"> 
-                                <h3>Young Ethan at home</h3>
-                            </div>
+								<img src="images/754_eia0002.jpeg" alt="Young Ethan at home" />
+								<h4>Young Ethan at home</h4>
+							</div>
 
 							<div class="carousel-item">
-                                <img src="images/424_eia0004.jpg" alt="Ethan and his art teacher"> 
-                                <h3>Ethan and his art teacher</h3>
-                            </div>
-						
+								<img src="images/287_eia0003.jpg" alt="Young Ethan at home" />
+								<h4>Young Ethan at home</h4>
+							</div>
+
+							<div class="carousel-item">
+								<img src="images/424_eia0004.jpg" alt="Ethan and his art teacher" />
+								<h4>Ethan and his art teacher</h4>
+							</div>
+
 							<div class="carousel-item">
 								<img src="images/425_eia0005.jpg" alt="Sharpie Sketch of Dogs" />
-								<h3>Sharpie Sketch of Dogs</h3>
+								<h4>Sharpie Sketch of Dogs</h4>
 							</div>
 
 							<div class="carousel-item">
 								<img src="images/512_eia0006.jpg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
+								<h4>Sketching at the waterside</h4>
 							</div>
 
 							<div class="carousel-item">
 								<img src="images/288_eia0007.jpg" alt="Young Ethan at home" />
-								<h3>Young Ethan at home</h3>
+								<h4>Young Ethan at home</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/424_eia0008.jpg" alt="Young Ethan at home" />
-								<h3>Young Ethan at home</h3>
+								<h4>Young Ethan at home</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/565_eia0009.png" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0010.jpeg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/565_eia0011.png" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/565_eia0012.jpeg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0013.jpeg" alt="Ethan sketches a house boat" />
-								<h3>Ethan sketches a house boat</h3>
-		
+								<h4>Ethan sketches a house boat</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0014.jpeg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/565_eia0015.png" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/456_eia0016.jpeg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
-		
+
 							<div class="carousel-item">
 								<img src="images/565_eia0017.png" alt="Compare to Sharpie sketch" />
-								<h3>Compare to Sharpie sketch</h3>
-		
+								<h4>Compare to Sharpie sketch</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0018.jpeg" alt="Compare to Sharpie sketch" />
-								<h3>Compare to Sharpie sketch</h3>
-		
+								<h4>Compare to Sharpie sketch</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0019.jpeg" alt="Sharpie Sketch" />
-								<h3>Sharpie Sketch</h3>
-		
+								<h4>Sharpie Sketch</h4>
 							</div>
-		
+
 							<div class="carousel-item">
 								<img src="images/754_eia0020.jpeg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/512_eia0021.jpg" alt="Sketching at the waterside" />
-								<h3>Sketching at the waterside</h3>
-		
+								<h4>Sketching at the waterside</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0022.jpeg" alt="Sharpie Sketch" />
-								<h3>Sharpie Sketch</h3>
-		
+								<h4>Sharpie Sketch</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/565_eia0023.png" alt="Sharpie sketch of a waterfall" />
-								<h3>Sharpie sketch of a waterfall</h3>
-		
+								<h4>Sharpie sketch of a waterfall</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/754_eia0024.jpeg" alt="Sharpie Sketch" />
-								<h3>Sharpie Sketch</h3>
-		
+								<h4>Sharpie Sketch</h4>
 							</div>
-		
+
 							<div class="carousel-item">
 								<img src="images/565_eia0025.jpeg" alt="Sharpie Sketch jet air plane taking off" />
-								<h3>Sharpie Sketch jet air plane taking off</h3>
-		
+								<h4>Sharpie Sketch jet air plane taking off</h4>
 							</div>
 							<div class="carousel-item">
 								<img src="images/565_eia0026.png" alt="Sharpie Sketch" />
-								<h3>Sharpie Sketch</h3>
-		
+								<h4>Sharpie Sketch</h4>
 							</div>
-		
+
 							<div class="carousel-item">
 								<img src="images/565_eia0027.png" alt="Sharpie Sketch birds resting" />
-								<h3>Sharpie Sketch birds resting</h3>
-		
+								<h4>Sharpie Sketch birds resting</h4>
 							</div>
-		
+
 							<div class="carousel-item">
 								<img src="images/565_eia0028.png" alt="Sharpie sketch of boats" />
-								<h3>Sharpie sketch of boats</h3>
+								<h4>Sharpie sketch of boats</h4>
 							</div>
-
-                        </div> <!-- Left right --> 
-                        <a class="carousel-control-prev" href="#custCarousel" role="button" data-slide="prev"> 
-                            <span class="carousel-control-prev-icon"></span>
-						</a> 
-                        <a class="carousel-control-next" href="#custCarousel" role="button" data-slide="next"> 
-                            <span class="carousel-control-next-icon"></span>
+						</div>
+						<!-- Left right -->
+						<a class="carousel-control-prev" href="#custCarousel" role="button" data-slide="prev">
+							<span class="carousel-control-prev-icon"></span>
+						</a>
+						<a class="carousel-control-next" href="#custCarousel" role="button" data-slide="next">
+							<span class="carousel-control-next-icon"></span>
 						</a>
 						<ol class="carousel-indicators list-inline d-flex align-items-center">
-							<li class="list-inline-item selected active" data-slide-to="0" data-target="#custCarousel"><img src="images/428_eia0001.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="1" data-target="#custCarousel"><img src="images/754_eia0002.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="2" data-target="#custCarousel"><img src="images/287_eia0003.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="3" data-target="#custCarousel"><img src="images/424_eia0004.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="4" data-target="#custCarousel"><img src="images/425_eia0005.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="5" data-target="#custCarousel"><img src="images/512_eia0006.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="6" data-target="#custCarousel"><img src="images/288_eia0007.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="7" data-target="#custCarousel"><img src="images/424_eia0008.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="8" data-target="#custCarousel"><img src="images/565_eia0009.png" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="9" data-target="#custCarousel"><img src="images/754_eia0010.jpeg" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="10" data-target="#custCarousel"><img src="images/565_eia0011.png" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="11" data-target="#custCarousel"><img src="images/565_eia0012.jpeg" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="12" data-target="#custCarousel"> <img src="images/754_eia0013.jpeg" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="13" data-target="#custCarousel"> <img src="images/754_eia0014.jpeg" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="14" data-target="#custCarousel"> <img src="images/565_eia0015.png" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="15" data-target="#custCarousel"> <img src="images/456_eia0016.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="16" data-target="#custCarousel"> <img src="images/565_eia0017.png" class="img-fluid"> </li>
-							<li class="list-inline-item" data-slide-to="17" data-target="#custCarousel"> <img src="images/754_eia0018.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="18" data-target="#custCarousel"> <img src="images/754_eia0019.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="19" data-target="#custCarousel"> <img src="images/754_eia0020.jpeg" class="img-fluid"></li>							
-							<li class="list-inline-item" data-slide-to="20" data-target="#custCarousel"> <img src="images/512_eia0021.jpg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="21" data-target="#custCarousel"> <img src="images/754_eia0022.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="22" data-target="#custCarousel"> <img src="images/565_eia0023.png" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="23" data-target="#custCarousel"> <img src="images/754_eia0024.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="24" data-target="#custCarousel"> <img src="images/565_eia0025.jpeg" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="25" data-target="#custCarousel"> <img src="images/565_eia0026.png" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="26" data-target="#custCarousel"> <img src="images/565_eia0027.png" class="img-fluid"></li>
-							<li class="list-inline-item" data-slide-to="27" data-target="#custCarousel"> <img src="images/565_eia0028.png" class="img-fluid"></li>
+							<li class="list-inline-item selected active" data-slide-to="0" data-target="#custCarousel">
+								<img src="images/428_eia0001.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="1" data-target="#custCarousel">
+								<img src="images/754_eia0002.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="2" data-target="#custCarousel">
+								<img src="images/287_eia0003.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="3" data-target="#custCarousel">
+								<img src="images/424_eia0004.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="4" data-target="#custCarousel">
+								<img src="images/425_eia0005.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="5" data-target="#custCarousel">
+								<img src="images/512_eia0006.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="6" data-target="#custCarousel">
+								<img src="images/288_eia0007.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="7" data-target="#custCarousel">
+								<img src="images/424_eia0008.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="8" data-target="#custCarousel">
+								<img src="images/565_eia0009.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="9" data-target="#custCarousel">
+								<img src="images/754_eia0010.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="10" data-target="#custCarousel">
+								<img src="images/565_eia0011.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="11" data-target="#custCarousel">
+								<img src="images/565_eia0012.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="12" data-target="#custCarousel">
+								<img src="images/754_eia0013.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="13" data-target="#custCarousel">
+								<img src="images/754_eia0014.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="14" data-target="#custCarousel">
+								<img src="images/565_eia0015.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="15" data-target="#custCarousel">
+								<img src="images/456_eia0016.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="16" data-target="#custCarousel">
+								<img src="images/565_eia0017.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="17" data-target="#custCarousel">
+								<img src="images/754_eia0018.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="18" data-target="#custCarousel">
+								<img src="images/754_eia0019.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="19" data-target="#custCarousel">
+								<img src="images/754_eia0020.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="20" data-target="#custCarousel">
+								<img src="images/512_eia0021.jpg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="21" data-target="#custCarousel">
+								<img src="images/754_eia0022.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="22" data-target="#custCarousel">
+								<img src="images/565_eia0023.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="23" data-target="#custCarousel">
+								<img src="images/754_eia0024.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="24" data-target="#custCarousel">
+								<img src="images/565_eia0025.jpeg" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="25" data-target="#custCarousel">
+								<img src="images/565_eia0026.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="26" data-target="#custCarousel">
+								<img src="images/565_eia0027.png" class="img-fluid" />
+							</li>
+							<li class="list-inline-item" data-slide-to="27" data-target="#custCarousel">
+								<img src="images/565_eia0028.png" class="img-fluid" />
+							</li>
 						</ol>
-                    </div>
+					</div>
 
-                </div>
-                
-            </div>
-        </div>
-
-    </section>
+				</div>
+			</div>
+		</section>
 		<!-- #content end -->
 		<footer id="footer" class="dark">
 			<div id="copyrights">
 				<div class="container">
 					<div class="row col-mb-30">
-						<div class="col-md-6 text-center text-md-left">Copyright &copy; ethanAart 2021 All Rights Reserved
-							<br>
-							<div class="copyright-links"><a href="#">Developed in association with Westcliff University Web Development Boot Camp</a>
+						<div class="col-md-6 text-center text-md-left">
+							Copyright &copy; ethanAart 2021 All Rights Reserved
+							<br />
+							<div class="copyright-links">
+								<a href="#">Developed in association with Westcliff University Web
+									Development Boot Camp</a>
 							</div>
 						</div>
 					</div>
@@ -523,26 +637,36 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 	<script src="assets/js/functions.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 	<style>
-		ol.flex-control-nav li:hover a, ol.flex-control-nav li a.flex-active {
-		    background-color: #383838;
+		ol.flex-control-nav li:hover a,
+		ol.flex-control-nav li a.flex-active {
+			background-color: #383838;
 		}
+
 		ol.flex-control-nav li a {
-		    border: 1px solid #383838;
+			border: 1px solid #383838;
 		}
-		@media screen and (min-width:480px){
-		#wowslider-container1 {
-		    height: 700px;
+
+		@media screen and (min-width: 480px) {
+			#wowslider-container1 {
+				height: 700px;
 			}
 		}
 	</style>
 	<!--disable right click and copy & paste-->
 	<script type="text/javascript">
-		$(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
+		$(document).ready(function () {
+			$("body").bind("cut copy paste", function (n) {
+					n.preventDefault();
+				}),
+				$("body").on("contextmenu", function (n) {
+					return !1;
+				});
+		});
 	</script>
 </body>
 

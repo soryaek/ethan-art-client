@@ -5,8 +5,10 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<!-- Stylesheets
 	============================================= -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+	<link
+		href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap"
+		rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="assets/style.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/dark.css" type="text/css" />
@@ -14,10 +16,6 @@
 	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/custom.css" type="text/css" />
-	<link rel="stylesheet" href="assets/css/carousel.css" type="text/css" />
-   
-
-
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="website">
@@ -26,7 +24,7 @@
 	<meta property="og:url" content="https://myclone.page/">
 	<meta property="og:site_name" content="myclone.page">
 	<meta property="og:image" content="https://myclone.page/images/og-color-logo-ethanaart.jpg" />
-	<title> | ethanAart</title>
+	<title> Holiday Cards| ethanAart</title>
 	<meta name="description" content=" Holiday Cards art by Ethan Altshuler created during his childhood" />
 	<meta name="keywords" content="Holiday Cards art, childhood" />
 	<meta name="robots" content="all,follow" />
@@ -40,27 +38,105 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130204150-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-		
-			gtag('config', 'UA-130204150-1');
 
-	// init Masonry
-	var $grid = $('.grid').masonry({
-		itemSelector: '.grid-item',
-		percentPosition: true,
-		columnWidth: '.grid-sizer'
-	});
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry();
-	});  
+		gtag('config', 'UA-130204150-1');
+
+		// init Masonry
+		var $grid = $('.grid').masonry({
+			itemSelector: '.grid-item',
+			percentPosition: true,
+			columnWidth: '.grid-sizer'
+		});
+
+		// layout Masonry after each image loads
+		$grid.imagesLoaded().progress(function () {
+			$grid.masonry();
+		});
 	</script>
-<style>
-	.side-header #logo img {
-		height: auto !important;
-	}
+	<style>
+		.side-header #logo img {
+			height: auto !important;
+		}
+
+		.carousel-inner {
+			width: 500px;
+			height: 750px;
+			margin: 0 auto;
+		}
+
+		.carousel-control-next,
+		.carousel-control-prev {
+			height: 750px;
+		}
+
+		.carousel-control-next-icon,
+		.carousel-control-prev-icon {
+			filter: invert(1);
+		}
+
+		#custCarousel {
+			margin-top: 20px;
+		}
+
+		#custCarousel .carousel-indicators {
+			position: static;
+			margin-top: 20px;
+			display: flex;
+			flex-wrap: wrap;
+			list-style-type: none;
+			padding-left: 0;
+			margin-bottom: 200px;
+		}
+
+		#custCarousel .carousel-indicators>li {
+			width: 100px;
+			opacity: 1;
+			margin-bottom: 140px;
+		}
+
+		#custCarousel .carousel-indicators li img {
+			display: block;
+			max-width: 100%;
+			margin: 10px;
+			margin-bottom: 20px;
+			opacity: 1;
+
+		}
+
+		#custCarousel .carousel-indicators li.active img {
+			border: 3px solid black;
+		}
+
+		@media screen and (max-width: 768px) {
+			.carousel-inner {
+				width: 400px;
+				height: 600px;
+				margin: 0 auto;
+			}
+
+			.carousel-control-next,
+			.carousel-control-prev {
+				height: 600px;
+			}
+		}
+
+		@media screen and (max-width: 600px) {
+			.carousel-inner {
+				width: 350px;
+				height: 550px;
+				margin: 0 auto;
+			}
+
+			.carousel-control-next,
+			.carousel-control-prev {
+				height: 550px;
+			}
+		}
 	</style>
 </head>
 
@@ -81,21 +157,30 @@
 						<!-- #logo end -->
 						<div id="primary-menu-trigger">
 							<svg class="svg-trigger" viewBox="0 0 100 100">
-								<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
 								<path d="m 30,50 h 40"></path>
-								<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
 							</svg>
 						</div>
 						<div class="header-misc d-none d-sm-block">
 							<img src="images/119_Sketching_at_the_bluffs_6_.jpg" alt="" style="" border="0">
 							<div class="d-flex my-lg-3">
-								<a href="https://www.facebook.com/ethanAart/" class="social-icon si-small si-borderless si-facebook">	<i class="icon-facebook"></i>
+								<a href="https://www.facebook.com/ethanAart/"
+									class="social-icon si-small si-borderless si-facebook"> <i
+										class="icon-facebook"></i>
 									<i class="icon-facebook"></i>
 								</a>
-								<a href="https://www.instagram.com/ethanaart/" class="social-icon si-small si-borderless si-pinterest">	<i class="icon-instagram"></i>
+								<a href="https://www.instagram.com/ethanaart/"
+									class="social-icon si-small si-borderless si-pinterest"> <i
+										class="icon-instagram"></i>
 									<i class="icon-instagram"></i>
 								</a>
-								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">	<i class="icon-store"></i>
+								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">
+									<i class="icon-store"></i>
 									<i class="icon-store"></i>
 								</a>
 							</div>
@@ -283,11 +368,11 @@
 												<div>Linkin Park</div>
 											</a>
 										</li>
-								<li class="menu-item">
-									<a class="menu-link" href="tshirtdesigns.html">
-										<div>Early T-Shirt Designs</div>
-									</a>
-								</li>
+										<li class="menu-item">
+											<a class="menu-link" href="tshirtdesigns.html">
+												<div>Early T-Shirt Designs</div>
+											</a>
+										</li>
 									</ul>
 								</li>
 							</ul>
@@ -307,103 +392,122 @@
 				</ol>
 			</div>
 		</section>
-    <section> 
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
-                        <!-- slides -->
-                        <div class="carousel-inner d-flex align-items-center">
-                            <div class="carousel-item active">
-                                <img src="images/holidaycards/ValentineHeart.jpg" alt="Valentine Heart"> 
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0001.jpg" alt="Rockin' New Year 2006"> 
-                                <h3>Rockin' New Year 2006</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0002.jpeg" alt="Happy 2008 enjoy the ride!">
-                                <h3>Happy 2008 enjoy the ride!</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0003.jpg" alt="Rock On 2009"> 
-                                <h3>Rock On 2009</h3>
-                            </div>
+		<section>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12">
+						<div id="custCarousel" class="carousel slide" data-ride="carousel" align="center">
+							<!-- slides -->
+							<div class="carousel-inner d-flex align-items-center">
+								<div class="carousel-item active">
+									<img src="images/holidaycards/ValentineHeart.jpg" alt="Valentine Heart">
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0001.jpg" alt="Rockin' New Year 2006">
+									<h4>Rockin' New Year 2006</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0002.jpeg" alt="Happy 2008 enjoy the ride!">
+									<h4>Happy 2008 enjoy the ride!</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0003.jpg" alt="Rock On 2009">
+									<h4>Rock On 2009</h4>
+								</div>
 
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0004.jpg" alt="OMG...our Valentine's Day card from Ethan"> 
-                                <h3>OMG...our Valentine's Day card from Ethan</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0005.jpg" alt=""now join your hands," 2011"> 
-                                <h3>"now join your hands," 2011</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0006.jpg" alt="Live Long & Prosper Hand 2011"> 
-                                <h3>Live Long & Prosper Hand 2011</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0007.jpg" alt="Peace Symbol Hand 2011"> 
-                                <h3>Peace Symbol Hand 2011</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0008.jpg" alt="Believe in the Best Version of Yourself 2012"> 
-                                <h3>Believe in the Best Version of Yourself 2012</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0009.jpg" alt="Envision the life your want, then live it!"> 
-                                <h3>Envision the life your want, then live it!</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/hol0010.png" alt="Wishing you a year full of color"> 
-                                <h3>Wishing you a year full of color</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/HolidayCardFront.jpg" alt="There's no place like home
-                                2016 Holiday Card Front"> 
-                                <h3>There's no place like home 2016 Holiday Card Front</h3>
-                            </div>
-                            <div class="carousel-item">
-                                <img src="images/holidaycards/HolidayCardBack.jpg" alt="There's no place like home
-                                2016 Holiday Card Back"> 
-                                <h3>There's no place like home 2016 Holiday Card Back</h3>
-                            </div>
-                        </div> <!-- Left right --> 
-                        <a class="carousel-control-prev" href="#custCarousel" data-slide="prev"> 
-                            <span class="carousel-control-prev-icon"></span> </a> 
-                        <a class="carousel-control-next" href="#custCarousel" data-slide="next"> 
-                            <span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
-                            <ol class="carousel-indicators list-inline d-flex align-items-center">
-                                <li class="list-inline-item selected active" data-slide-to="0" data-target="#custCarousel"> <img src="images/holidaycards/ValentineHeart.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="1" data-target="#custCarousel"> <img src="images/holidaycards/hol0001.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="2" data-target="#custCarousel"> <img src="images/holidaycards/hol0002.jpeg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="3" data-target="#custCarousel"> <img src="images/holidaycards/hol0003.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="4" data-target="#custCarousel"> <img src="images/holidaycards/hol0004.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="5" data-target="#custCarousel"> <img src="images/holidaycards/hol0005.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="6" data-target="#custCarousel"> <img src="images/holidaycards/hol0006.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="7" data-target="#custCarousel"> <img src="images/holidaycards/hol0007.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="8" data-target="#custCarousel"> <img src="images/holidaycards/hol0008.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="9" data-target="#custCarousel"> <img src="images/holidaycards/hol0009.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="10" data-target="#custCarousel"> <img src="images/holidaycards/hol0010.png" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="11" data-target="#custCarousel"> <img src="images/holidaycards/HolidayCardFront.jpg" class="img-fluid"></li>
-                                <li class="list-inline-item" data-slide-to="12" data-target="#custCarousel"> <img src="images/holidaycards/HolidayCardBack.jpg" class="img-fluid"></li>
-                            </ol>
-                   </div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0004.jpg"
+										alt="OMG...our Valentine's Day card from Ethan">
+									<h4>OMG...our Valentine's Day card from Ethan</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0005.jpg" alt="" now join your hands," 2011">
+									<h4>"now join your hands," 2011</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0006.jpg" alt="Live Long & Prosper Hand 2011">
+									<h4>Live Long & Prosper Hand 2011</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0007.jpg" alt="Peace Symbol Hand 2011">
+									<h4>Peace Symbol Hand 2011</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0008.jpg"
+										alt="Believe in the Best Version of Yourself 2012">
+									<h4>Believe in the Best Version of Yourself 2012</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0009.jpg"
+										alt="Envision the life your want, then live it!">
+									<h4>Envision the life your want, then live it!</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/hol0010.png" alt="Wishing you a year full of color">
+									<h4>Wishing you a year full of color</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/HolidayCardFront.jpg" alt="There's no place like home
+                                2016 Holiday Card Front">
+									<h4>There's no place like home 2016 Holiday Card Front</h4>
+								</div>
+								<div class="carousel-item">
+									<img src="images/holidaycards/HolidayCardBack.jpg" alt="There's no place like home
+                                2016 Holiday Card Back">
+									<h4>There's no place like home 2016 Holiday Card Back</h4>
+								</div>
+							</div> <!-- Left right -->
+							<a class="carousel-control-prev" href="#custCarousel" data-slide="prev">
+								<span class="carousel-control-prev-icon"></span> </a>
+							<a class="carousel-control-next" href="#custCarousel" data-slide="next">
+								<span class="carousel-control-next-icon"></span> </a> <!-- Thumbnails -->
+							<ol class="carousel-indicators list-inline d-flex align-items-center">
+								<li class="list-inline-item selected active" data-slide-to="0"
+									data-target="#custCarousel"> <img src="images/holidaycards/ValentineHeart.jpg"
+										class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="1" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0001.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="2" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0002.jpeg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="3" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0003.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="4" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0004.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="5" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0005.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="6" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0006.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="7" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0007.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="8" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0008.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="9" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0009.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="10" data-target="#custCarousel"> <img
+										src="images/holidaycards/hol0010.png" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="11" data-target="#custCarousel"> <img
+										src="images/holidaycards/HolidayCardFront.jpg" class="img-fluid"></li>
+								<li class="list-inline-item" data-slide-to="12" data-target="#custCarousel"> <img
+										src="images/holidaycards/HolidayCardBack.jpg" class="img-fluid"></li>
+							</ol>
+						</div>
 
-                </div>
-                
-            </div>
-        </div>
+					</div>
 
-    </section>
+				</div>
+			</div>
+
+		</section>
 		<!-- #content end -->
 		<footer id="footer" class="dark">
 			<div id="copyrights">
 				<div class="container">
 					<div class="row col-mb-30">
-						<div class="col-md-6 text-center text-md-left">Copyright &copy; ethanAart 2021 All Rights Reserved
+						<div class="col-md-6 text-center text-md-left">Copyright &copy; ethanAart 2021 All Rights
+							Reserved
 							<br>
-							<div class="copyright-links"><a href="#">Developed in association with Westcliff University Web Development Boot Camp</a>
+							<div class="copyright-links"><a href="#">Developed in association with Westcliff University
+									Web Development Boot Camp</a>
 							</div>
 						</div>
 					</div>
@@ -418,26 +522,35 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 	<script src="assets/js/functions.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
 	<style>
-		ol.flex-control-nav li:hover a, ol.flex-control-nav li a.flex-active {
-		    background-color: #383838;
+		ol.flex-control-nav li:hover a,
+		ol.flex-control-nav li a.flex-active {
+			background-color: #383838;
 		}
+
 		ol.flex-control-nav li a {
-		    border: 1px solid #383838;
+			border: 1px solid #383838;
 		}
-		@media screen and (min-width:480px){
-		#wowslider-container1 {
-		    height: 700px;
+
+		@media screen and (min-width:480px) {
+			#wowslider-container1 {
+				height: 700px;
 			}
 		}
 	</style>
 	<!--disable right click and copy & paste-->
 	<script type="text/javascript">
-		$(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
+		$(document).ready(function () {
+			$("body").bind("cut copy paste", function (n) {
+				n.preventDefault()
+			}), $("body").on("contextmenu", function (n) {
+				return !1
+			})
+		});
 	</script>
 </body>
 

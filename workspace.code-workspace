@@ -1,0 +1,16 @@
+{
+	"folders": [
+		{
+			"path": "../../../Downloads/Great-Cliffs-main"
+		},
+		{
+			"path": "../Week7/homework-module2"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "project1"
+	}
+}
