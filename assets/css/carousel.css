@@ -4,6 +4,11 @@
     height: 850px;
     margin: 0 auto;
 }
+.carousel-control-next, 
+.carousel-control-prev{
+    height: 70%;
+}
+
 .carousel-control-next-icon, 
 .carousel-control-prev-icon{
     filter: invert(1);
@@ -21,9 +26,13 @@
 #custCarousel .carousel-indicators {
     position: static;
     margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    list-style-type: none;
+    padding-left:0;
+    
 
 }
-
 
 #custCarousel .carousel-indicators>li {
     width: 100px;
@@ -34,15 +43,16 @@
 #custCarousel .carousel-indicators li img {
     display: block;
     max-width: 100%;  
+    margin:10px;
+    margin-bottom: 20px;
+
 }
-#custCarousel .carousel-indicators li.active img {
-  
+#custCarousel .carousel-indicators li.active img{
     border: 2px solid grey;
 }
 
-
 .carousel-item img {
-    width: 80%
+    width: 80%;
 }
 @media screen and (max-width: 800px){
     .carousel-inner{
@@ -53,3 +63,5 @@
 
 
 }
+
+
