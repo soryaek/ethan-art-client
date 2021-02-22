@@ -5,7 +5,11 @@
 	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 	<!-- Stylesheets
 	============================================= -->
-	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap" rel="stylesheet" type="text/css" />
+	<link
+		href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Poppins:300,400,500,600,700|PT+Serif:400,400i&display=swap"
+		rel="stylesheet" type="text/css" />
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" href="assets/css/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="assets/style.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/dark.css" type="text/css" />
@@ -13,51 +17,91 @@
 	<link rel="stylesheet" href="assets/css/animate.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/magnific-popup.css" type="text/css" />
 	<link rel="stylesheet" href="assets/css/custom.css" type="text/css" />
-	<link rel="stylesheet" href="assets/hungergames.css" type="text/css" />
+	<!-- <link rel="stylesheet" href="assets/hungergames.css" type="text/css" /> -->
 
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<meta property="og:locale" content="en_US">
 	<meta property="og:type" content="website">
-	<meta property="og:title" content="Ethan In Action | ethanAart" />
-	<meta property="og:description" content="Ethan In Action art by Ethan Altshuler created during his childhood">
+	<meta property="og:title" content="Hunger Games | ethanAart" />
+	<meta property="og:description" content="Hunger Games art by Ethan Altshuler created during his childhood">
 	<meta property="og:url" content="https://myclone.page/">
 	<meta property="og:site_name" content="myclone.page">
 	<meta property="og:image" content="https://myclone.page/images/og-color-logo-ethanaart.jpg" />
-	<title> | ethanAart</title>
-	<meta name="description" content=" Ethan In Actionart by Ethan Altshuler created during his childhood" />
-	<meta name="keywords" content="Ethan In Action art, childhood" />
+	<title> Hunger Games | ethanAart</title>
+	<meta name="description" content=" Hunger Gamesart by Ethan Altshuler created during his childhood" />
+	<meta name="keywords" content="Hunger Games art, childhood" />
 	<meta name="robots" content="all,follow" />
 	<meta name="googlebot" content="index,follow,snippet,archive" />
 	<meta name="twitter:card" content="https://myclone.page/images/og-color-logo-ethanaart.jpg">
-	<meta name="twitter:title" content="Ethan In Action | ethanAart ">
+	<meta name="twitter:title" content="Hunger Games | ethanAart ">
 	<meta name="twitter:url" content=" https://myclone.page/ethanentersmidteens.html" />
-	<meta name="twitter:description" content=" Abstract art by Ethan Altshuler created during his childhood ">
+	<meta name="twitter:description" content=" Hunger Games art by Ethan Altshuler created during his childhood ">
 	<meta name="twitter:image" content=" https://myclone.page/images/og-color-logo-ethanaart.jpg" />
 	<link rel="shortcut icon" href="/favicon.ico" />
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130204150-1"></script>
 	<script>
 		window.dataLayer = window.dataLayer || [];
-			function gtag(){dataLayer.push(arguments);}
-			gtag('js', new Date());
-		
-			gtag('config', 'UA-130204150-1');
 
-	// init Masonry
-	var $grid = $('.grid').masonry({
-		itemSelector: '.grid-item',
-		percentPosition: true,
-		columnWidth: '.grid-sizer'
-	});
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
 
-	// layout Masonry after each image loads
-	$grid.imagesLoaded().progress( function() {
-		$grid.masonry();
-	});  
+		gtag('config', 'UA-130204150-1');
 	</script>
-<style>
-	.side-header #logo img {
-		height: auto !important;
-	}
+	<style>
+		.side-header #logo img {height: auto !important;}
+
+		.imageselect .imagebox {
+			position: relative;
+			margin-top:100px;
+			margin-bottom:100px;}
+
+		.imageselect .imagebox figure {
+			position: relative;
+			overflow: hidden;
+			width: 600px;
+	
+		}
+
+		.imageselect .imagebox figcaption {
+			background-color: grey;
+			position: absolute;
+			left: 10px;
+			right: 10px;
+			bottom: 10px;
+			padding: 20px;
+
+			-webkit-transform: translateY(140%);
+			-moz-transform: translateY(140%);
+			-ms-transform: translateY(140%);
+			-o-transform: translateY(140%);
+			transform: translateY(140%);
+			-moz-transition: -moz-transform 0.5s ease;
+			-o-transition: -o-transform 0.5s ease;
+			-webkit-transition: -webkit-transform 0.5s ease;
+			-ms-transition: -ms-transform 0.5s ease;
+			transition: transform 0.5s ease;
+		}
+
+		.imageselect .imagebox .caption-title {
+			margin-bottom: 0;
+			color: #fff;
+			font-size: 1rem;
+		}
+
+		.imageselect .imagebox:hover figcaption {
+			-webkit-transform: translateY(0);
+			-moz-transform: translateY(0);
+			-ms-transform: translateY(0);
+			-o-transform: translateY(0);
+			transform: translateY(0)
+		}
+		@media only screen and (max-width: 768px){
+			.imageselect .imagebox figure {width: 400px;}
+		
+
+		}
 	</style>
 </head>
 
@@ -78,21 +122,30 @@
 						<!-- #logo end -->
 						<div id="primary-menu-trigger">
 							<svg class="svg-trigger" viewBox="0 0 100 100">
-								<path d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20"></path>
+								<path
+									d="m 30,33 h 40 c 3.722839,0 7.5,3.126468 7.5,8.578427 0,5.451959 -2.727029,8.421573 -7.5,8.421573 h -20">
+								</path>
 								<path d="m 30,50 h 40"></path>
-								<path d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20"></path>
+								<path
+									d="m 70,67 h -40 c 0,0 -7.5,-0.802118 -7.5,-8.365747 0,-7.563629 7.5,-8.634253 7.5,-8.634253 h 20">
+								</path>
 							</svg>
 						</div>
 						<div class="header-misc d-none d-sm-block">
 							<img src="images/119_Sketching_at_the_bluffs_6_.jpg" alt="" style="" border="0">
 							<div class="d-flex my-lg-3">
-								<a href="https://www.facebook.com/ethanAart/" class="social-icon si-small si-borderless si-facebook">	<i class="icon-facebook"></i>
+								<a href="https://www.facebook.com/ethanAart/"
+									class="social-icon si-small si-borderless si-facebook"> <i
+										class="icon-facebook"></i>
 									<i class="icon-facebook"></i>
 								</a>
-								<a href="https://www.instagram.com/ethanaart/" class="social-icon si-small si-borderless si-pinterest">	<i class="icon-instagram"></i>
+								<a href="https://www.instagram.com/ethanaart/"
+									class="social-icon si-small si-borderless si-pinterest"> <i
+										class="icon-instagram"></i>
 									<i class="icon-instagram"></i>
 								</a>
-								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">	<i class="icon-store"></i>
+								<a href="https://ethanaart.shop/" class="social-icon si-small si-borderless si-github">
+									<i class="icon-store"></i>
 									<i class="icon-store"></i>
 								</a>
 							</div>
@@ -280,11 +333,11 @@
 												<div>Linkin Park</div>
 											</a>
 										</li>
-								<li class="menu-item">
-									<a class="menu-link" href="tshirtdesigns.html">
-										<div>Early T-Shirt Designs</div>
-									</a>
-								</li>
+										<li class="menu-item">
+											<a class="menu-link" href="tshirtdesigns.html">
+												<div>Early T-Shirt Designs</div>
+											</a>
+										</li>
 									</ul>
 								</li>
 							</ul>
@@ -296,36 +349,44 @@
 		</header>
 		<section id="page-title">
 			<div class="container clearfix">
-				<h1>Ethan In Action</h1>
+				<h1>Hunger Games</h1>
 				<ol class="breadcrumb">
 					<li class="breadcrumb-item"><a href="#">Home</a>
 					</li>
-					<li class="breadcrumb-item active" aria-current="page">Ethan In Action</li>
+					<li class="breadcrumb-item active" aria-current="page">Hunger Games</li>
 				</ol>
 			</div>
 		</section>
-    <section> 
-    <div class="container-fluid">
-        <div class="grid">
-        <div class="grid-sizer"></div>
-        <div class="grid-item card w-50">
-        <img src="images/754_hun0001.jpg" alt="Ethan and his art teacher"/>
-        <div class="card-body text-white rgba-black-lig">Ethan and his art teacher</div>
-        </div>
+		<section>
+			<div class="container">
+				<div id="main text-center">
+					<div class="imageselect row add-clearfix image-imagebox mt-5 mb-5 text-center">
+						<div class="col-12">
+							<article class="imagebox">
+								<figure class="m-auto">
+									<a href="#"><img src="images/754_hun0001.jpg" alt="Katniss Everdeen" /></a>
+									<figcaption class="">
+										<h2 class="caption-title">Katniss Everdeen</h2>
+									</figcaption>
+								</figure>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
 
-    </div>
-    
-    </div>
-
-    </section>
+		</section>
 		<!-- #content end -->
 		<footer id="footer" class="dark">
 			<div id="copyrights">
 				<div class="container">
 					<div class="row col-mb-30">
-						<div class="col-md-6 text-center text-md-left">Copyright &copy; ethanAart 2021 All Rights Reserved
-							<br>
-							<div class="copyright-links"><a href="#">Developed in association with Westcliff University Web Development Boot Camp</a>
+						<div class="col-md-6 text-center text-md-left">
+							Copyright &copy; ethanAart 2021 All Rights Reserved
+							<br />
+							<div class="copyright-links">
+								<a href="#">Developed in association with Westcliff University Web
+									Development Boot Camp</a>
 							</div>
 						</div>
 					</div>
@@ -340,23 +401,43 @@
 	<script src="js/jquery.js"></script>
 	<script src="js/plugins.min.js"></script>
 	<script src="assets/js/functions.js"></script>
+
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+	</script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+	</script>
 	<style>
-		ol.flex-control-nav li:hover a, ol.flex-control-nav li a.flex-active {
-		    background-color: #383838;
+		ol.flex-control-nav li:hover a,
+		ol.flex-control-nav li a.flex-active {
+			background-color: #383838;
 		}
+
 		ol.flex-control-nav li a {
-		    border: 1px solid #383838;
+			border: 1px solid #383838;
 		}
-		@media screen and (min-width:480px){
-		#wowslider-container1 {
-		    height: 700px;
+
+		@media screen and (min-width:480px) {
+			#wowslider-container1 {
+				height: 700px;
 			}
 		}
 	</style>
 	<!--disable right click and copy & paste-->
-	<script type="text/javascript">
-		$(document).ready(function(){$("body").bind("cut copy paste",function(n){n.preventDefault()}),$("body").on("contextmenu",function(n){return!1})});
-	</script>
+	<!-- <script type="text/javascript">
+		$(document).ready(function () {
+			$("body").bind("cut copy paste", function (n) {
+				n.preventDefault()
+			}), $("body").on("contextmenu", function (n) {
+				return !1
+			})
+		});
+	</script> -->
 </body>
 
 </html>
